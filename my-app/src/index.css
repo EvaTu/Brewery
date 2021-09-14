@@ -33,3 +33,8 @@
 .title {
     text-align: center;
 }
+
+.cardImage {
+    width: 100px;
+    height: auto
+}
