@@ -1,20 +1,14 @@
-import { useState, useEffect } from 'react'
+import Header from "./components/Header"
+import BreweryContainer from "./components/BreweryContainer";
 
 function App() {
-  const [ getBeer, setGetBeer ] = useState([])
-
-  useEffect(() => {
-    fetch("https://raw.githubusercontent.com/openbrewerydb/openbrewerydb/master/breweries.json")
-    .then(response => response.json())
-    .then(getbeerArr => setGetBeer(getbeerArr))
-  }, [])
-
-  const
-
   return (
-    <div className="App">
-      <h1>Find your Brewery!</h1>
-      {displayNewArray}
+    <div className="ui raised segment">
+      <div className="ui segment violet inverted">
+        <h2>Find your Favorite Brewery</h2>
+      </div>
+      <Header />
+      <BreweryContainer />
     </div>
   );
 }
