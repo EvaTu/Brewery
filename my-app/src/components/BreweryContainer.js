@@ -5,6 +5,7 @@ import BreweryList from "./BreweryList"
 
 function BreweryContainer() {
     const [ getBreweries, setGetBreweries] = useState([])
+    const [ searchBrewery, setSearchBrewery ] = useState("")
 
     //Ask Michelle about previous API for more options
     //Async Await
@@ -19,11 +20,15 @@ function BreweryContainer() {
         .then(breweryArray => setGetBreweries(breweryArray))
         }, [])
 
+    const displayBreweries = getBreweries.filter((brewery => {
+        return brewery.name.toLowerCase().includes(searchBrewery.toLowerCase())
+    }))
+
     return (
         <div>
-            <Search /> 
+            <Search searchBrewery={searchBrewery} onSearchChange={setSearchBrewery}/> 
             <BreweryForm />
-            <BreweryList breweriesArray={getBreweries} />
+            <BreweryList breweriesArray={displayBreweries} />
         </div>
     )
 }
