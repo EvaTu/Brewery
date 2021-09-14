@@ -14,7 +14,7 @@ function BreweryContainer() {
     // conditional rendering if fetch is taking a long time to render then loading screen 
 
     useEffect(() => {
-        fetch("https://api.openbrewerydb.org/breweries?by_city=new_york")
+        fetch("http://localhost:3000/breweries")
         .then(response => response.json())
         .then(breweryArray => setGetBreweries(breweryArray))
         }, [])

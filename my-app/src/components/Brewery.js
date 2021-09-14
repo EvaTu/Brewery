@@ -2,15 +2,17 @@ import React from 'react'
 
 function Brewery({ breweriesObject }) {
     console.log(breweriesObject)
-    const { name, street, postal_code, state, phone, website } = breweriesObject
+    const { image, name, street, postal_code, state, phone, website, details } = breweriesObject
 
     return (
-        <tr>
-            <td>{name}</td>
-            <td>{street} {postal_code}, {state}</td>
-            <td>{phone}</td>
-            <td>{website}</td>
-        </tr>
+        <div className="card">
+            <img src={image} alt={name}/>
+            <h3>{name}</h3>
+            <h4>Address: {street} {postal_code}, {state}</h4>
+            <h5>Phone #: {phone}</h5>
+            <a href={website}>{website}</a>
+            <h6>{details}</h6>
+        </div>
     )
 }
 
