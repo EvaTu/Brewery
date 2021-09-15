@@ -1,11 +1,11 @@
-import React from "react";
-import BreweryContainer from "./components/BreweryContainer";
+import React from 'react'
+import BreweryContainer from "./BreweryContainer";
 
-function Home({ getBreweries, setGetBreweries }) {
+function Home() {
     
     return (
         <div>
-            <BreweryContainer getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
+            <BreweryContainer />
         </div>
     )
 }
