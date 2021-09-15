@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function BreweryForm() {
+function BreweryForm({ onAddBrewery }) {
     const [ formData , setFormData ] = useState({
         image: "",
         name: "",
@@ -19,9 +19,36 @@ function BreweryForm() {
         setFormData({...formData, [targetName]: targetValue})
     }
 
+    function handleSubmit(e) {
+        e.preventDefault()
+
+        fetch("http://localhost:3000/breweries", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                formData
+            ),
+        })
+        .then(response => response.json())
+        .then(newBrewery => onAddBrewery(newBrewery))
+        setFormData({
+            image: "",
+            name: "",
+            street: "",
+            city: "",
+            state: "",
+            postal_code: "",
+            phone: "",
+            website: "",
+            details: ""
+        })
+    }
+
     return (
         <div className="new-brewery-form">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     name="name"
@@ -85,6 +112,7 @@ function BreweryForm() {
                     value={formData.details}
                     onChange={manageFormData}
                 />
+                <button type="submit" value="submit">Add New Brewery</button>
             </form>
         </div>
     )

@@ -22,6 +22,11 @@ function BreweryContainer() {
         .then(breweryArray => setGetBreweries(breweryArray))
         }, [])
 
+    function handleAddBrewery(newBrewery) {
+        const updatedBreweryArray = [...getBreweries, newBrewery]
+        setGetBreweries(updatedBreweryArray)
+    }
+
     const displayBreweries = getBreweries.filter((brewery => {
         return brewery.name.toLowerCase().includes(searchBrewery.toLowerCase())
     }))
@@ -29,7 +34,7 @@ function BreweryContainer() {
     return (
         <div>
             <Search searchBrewery={searchBrewery} onSearchChange={setSearchBrewery}/> 
-            <BreweryForm />
+            <BreweryForm onAddBrewery={handleAddBrewery}/>
             <BreweryList breweriesArray={displayBreweries} />
         </div>
     )
