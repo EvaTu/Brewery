@@ -1,13 +1,13 @@
 import React from 'react'
-import BreweryContainer from "./BreweryContainer";
+import BreweryContainer from "./BreweryContainer"
 
-function Home() {
-    
+function Home({ getBreweries, setGetBreweries }) {
     return (
-        <div>
-            <BreweryContainer />
-        </div>
-    )
+        <section id="home">
+            <h2>Home</h2>
+            <BreweryContainer getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
+        </section>
+    );
 }
 
-export default Home;
+export default Home

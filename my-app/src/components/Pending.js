@@ -1,11 +1,20 @@
 import React from "react";
+import BreweryForm from "./BreweryForm"
 
-function Pending() {
+function Pending({ getBreweries, setGetBreweries }) {
+
+
+    function handleAddBrewery(newBrewery) {
+        const updatedBreweryArray = [...getBreweries, newBrewery]
+        setGetBreweries(updatedBreweryArray)
+    }
+
     return (
         <div id="home">
             <h1 style={{ color: "firebrick" }}>
-                Page Pending
+                Submit a Brewery
             </h1>
+            <BreweryForm onAddBrewery={handleAddBrewery}/>
         </div>
     );
 }

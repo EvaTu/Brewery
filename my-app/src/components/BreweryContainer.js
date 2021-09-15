@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Search from "./Search"
-import BreweryForm from "./BreweryForm"
 import BreweryList from "./BreweryList"
 
-function BreweryContainer() {
-    const [ getBreweries, setGetBreweries] = useState([])
+function BreweryContainer({ getBreweries, setGetBreweries }) {
     const [ searchBrewery, setSearchBrewery ] = useState("")
 
     //Ask Michelle about previous API for more options
@@ -16,17 +14,6 @@ function BreweryContainer() {
 
     // json-server --watch db.json
 
-    useEffect(() => {
-        fetch("http://localhost:3000/breweries")
-        .then(response => response.json())
-        .then(breweryArray => setGetBreweries(breweryArray))
-        }, [])
-
-    function handleAddBrewery(newBrewery) {
-        const updatedBreweryArray = [...getBreweries, newBrewery]
-        setGetBreweries(updatedBreweryArray)
-    }
-
     const displayBreweries = getBreweries.filter((brewery => {
         return brewery.name.toLowerCase().includes(searchBrewery.toLowerCase())
     }))
@@ -34,7 +21,6 @@ function BreweryContainer() {
     return (
         <div>
             <Search searchBrewery={searchBrewery} onSearchChange={setSearchBrewery}/> 
-            <BreweryForm onAddBrewery={handleAddBrewery}/>
             <BreweryList breweriesArray={displayBreweries} />
         </div>
     )

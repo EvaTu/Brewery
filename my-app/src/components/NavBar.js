@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function NavBar() {
     return (
         <nav>
-            <NavLink exact to="/">Home</NavLink>
-            <NavLink exact to="/about">About</NavLink>
-            <NavLink exact to="/pending">Pending</NavLink>
+            <Link to="/home">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/submit">Submit a Brewery</Link>
         </nav>
     )
 }
