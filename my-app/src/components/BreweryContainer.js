@@ -14,6 +14,8 @@ function BreweryContainer() {
     // use for loop to render # length of items
     // conditional rendering if fetch is taking a long time to render then loading screen 
 
+    // json-server --watch db.json
+
     useEffect(() => {
         fetch("http://localhost:3000/breweries")
         .then(response => response.json())
