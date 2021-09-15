@@ -4,9 +4,11 @@ import { Link } from "react-router-dom"
 function NavBar() {
     return (
         <nav>
-            <Link to="/home">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/submit">Submit a Brewery</Link>
+            <img src="images/IMG_0653.PNG" alt="logo" className="logo"/>
+            <h1>JEY's Brewery Locator</h1>
+            <Link className="Nav"to="/home">Home</Link>
+            <Link className="Nav"to="/about">About</Link>
+            <Link className="Nav"to="/submit">Submit a Brewery</Link>
         </nav>
     )
 }

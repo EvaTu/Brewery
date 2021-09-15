@@ -19,7 +19,7 @@ function BreweryContainer({ getBreweries, setGetBreweries }) {
     }))
 
     return (
-        <div>
+        <div className="BreweryContainer">
             <Search searchBrewery={searchBrewery} onSearchChange={setSearchBrewery}/> 
             <BreweryList breweriesArray={displayBreweries} />
         </div>

@@ -2,10 +2,10 @@ import React from 'react'
 
 function Search({ searchBrewery, onSearchChange }) {
     return (
-        <div>
-            <input 
+        <div className="SearchBar">
+            <input
                 type="text"
-                placeholder="Search by Brewery Name"
+                placeholder="Search Brewery"
                 value={searchBrewery}
                 onChange={(e) => onSearchChange(e.target.value)}
             />
