@@ -1,10 +1,9 @@
-import React, { useState, useEffect }from 'react'
+import React, { useState, useEffect } from 'react'
 import Search from "./Search"
 import BreweryForm from "./BreweryForm"
 import BreweryList from "./BreweryList"
 
-function BreweryContainer() {
-    const [ getBreweries, setGetBreweries] = useState([])
+function BreweryContainer({ getBreweries, setGetBreweries }) {
     const [ searchBrewery, setSearchBrewery ] = useState("")
 
     //Ask Michelle about previous API for more options
@@ -15,12 +14,6 @@ function BreweryContainer() {
     // conditional rendering if fetch is taking a long time to render then loading screen 
 
     // json-server --watch db.json
-
-    useEffect(() => {
-        fetch("http://localhost:3000/breweries")
-        .then(response => response.json())
-        .then(breweryArray => setGetBreweries(breweryArray))
-        }, [])
 
     function handleAddBrewery(newBrewery) {
         const updatedBreweryArray = [...getBreweries, newBrewery]
