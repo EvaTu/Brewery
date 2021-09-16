@@ -14,6 +14,7 @@ function About() {
             <div className="about-closing">
                 <h3>Thank you for using our app!</h3>
                 <h3>Cheers! - John, Eva, Yaneizy</h3>
+                <img src="images/clinking_beer_mugs.gif" alt="gif"/>
             </div>
         </section>
     );

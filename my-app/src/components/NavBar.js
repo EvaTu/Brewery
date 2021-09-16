@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 
 function NavBar() {
-
     return (
         <nav>
             <img src="images/IMG_0653.PNG" alt="logo" className="logo"/>
