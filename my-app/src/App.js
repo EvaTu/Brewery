@@ -25,8 +25,8 @@ function App() {
         <Route exact path="/submit">
             <Submit getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
         </Route>
-        <Route exact path="/home">
-            <Home getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
+        <Route path={["/home", "/"]}>
+          <Home getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
         </Route>
       </Switch>
     </div>
