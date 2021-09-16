@@ -1,7 +1,7 @@
 import React from "react";
 import BreweryForm from "./BreweryForm"
 
-function Pending({ getBreweries, setGetBreweries }) {
+function Submit({ getBreweries, setGetBreweries }) {
 
 
     function handleAddBrewery(newBrewery) {
@@ -10,13 +10,13 @@ function Pending({ getBreweries, setGetBreweries }) {
     }
 
     return (
-        <div id="home">
-            <h1 style={{ color: "firebrick" }}>
-                Submit a Brewery
+        <div id="submit-form">
+            <h1>
+                Submit a Brewery in New York!
             </h1>
             <BreweryForm onAddBrewery={handleAddBrewery}/>
         </div>
     );
 }
 
-export default Pending;
+export default Submit;

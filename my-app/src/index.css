@@ -1,27 +1,27 @@
 body {
-    background-color: #E8DCCA;
+    background-color: #fadab5;
 }
 
 .BreweryContainer {
     height: 600px;
     width: auto;
-    padding: 15px 10px 10px 10px;
 }
 
 .SearchBar {
-    background-color: #ff7575;
-    border-radius: 20px;
+    background-color: #fad6ad;
+    border-radius: 10px;
     padding: 5px;
-    width: 350px;
-    box-shadow: 0 5px 20px #ff7c7c, 0 0 0 10px #ffffffeb;
+    width: 60%;
+    box-shadow: 0 5px 20px #f8c78f, 0 0 0 10px #df7d0c;
     margin-bottom: 20px;
+    margin: 1.5em auto;
 }
 
 .SearchBar input {
     padding: 5px;
-    background-color: #ff7575;
-    color: #fff;
-    font-family: Nunito;
+    background-color: #fad6ad;
+    color: rgb(47,79,79);
+    font-family: Tahoma, sans-serif;
     font-size: 1em;
     border: none;
     outline: none;
@@ -34,28 +34,35 @@ body {
     box-sizing: border-box;
 
 }
-nav {
-    background-color: #CFB997;
-    padding: 20px;
-    text-align: right;
-    font-size: 1.2em;
-    margin: 5px;
-    display: flex;
-}
-
-nav h1 {
-    flex-grow: 1;
-    text-align: left
-}
 
 .logo {
     width: 50px;
     height: auto;
 }
 
-.Nav {
-    padding: 10px
+nav {
+    background-color: #f8c78f;
+    padding: 20px;
+    text-align: right;
+    font-size: 1.2em;
+    display: flex;
 }
+
+nav h1 {
+    flex-grow: 1;
+    text-align: left;
+    margin: auto;
+}
+
+.Nav {
+    padding: 10px;
+    margin: auto;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+}
+
 
 .cardImage {
     width: 100px;
@@ -63,33 +70,96 @@ nav h1 {
 }
 
 .card {
-    margin: 1rem;
+    padding: 20px;
+    margin: 0.5rem;
+    text-align: center;
+    background-color: #fdf5eb;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    flex: 1;
+    width: 300px;
+    height: 320px;
+    border-radius: 20%;
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.04, 1.04);
+}
+
+.card h3, h4, h5 {
+    padding: 8px;
+}
+
+.cards {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.new-brewery-form {
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: auto;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.new-brewery-form input {
+    background-color: rgb(220,220,220);
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: rgb(47,79,79);
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    margin-bottom: 1.2em;
+    height: 45px;
+}
+
+.submit {
+    background-color: #f8c78f;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #3d2203;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#submit-form {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+#submit-form h1 {
+    padding: 30px;
+}
+
+#about {
+    padding: 20px;
+}
+
+.about-us, .about-JEY, .about-closing {
+    line-height: 1.5;
+    padding: 10px;
+    background: #fdf5eb;
+}
+
+.about-closing {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-}
-
-    .card {
-        width: calc(33% - 2rem);
-    }
-}
-
-@media (min-width: 1024px) {
-    .card {
-        width: calc(25% - 2rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .card {
-        width: calc(20% - 2rem);
-    }
-}
-
-.card {
-    border-style: solid;
+Nav a:hover {
+    text-shadow: 1.5px 1.5px #ef850d;
 }

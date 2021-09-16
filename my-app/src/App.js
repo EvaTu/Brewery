@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar"
 import { Switch, Route } from "react-router-dom"
 import Home from "./components/Home"
 import About from "./components/About"
-import Pending from "./components/Pending"
+import Submit from "./components/Submit"
 import "./index.css";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <About />
         </Route>
         <Route exact path="/submit">
-            <Pending getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
+            <Submit getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
         </Route>
         <Route exact path="/home">
             <Home getBreweries={getBreweries} setGetBreweries={setGetBreweries}/>
@@ -34,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+// json-server --watch db.json

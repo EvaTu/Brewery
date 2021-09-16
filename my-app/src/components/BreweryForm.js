@@ -48,7 +48,7 @@ function BreweryForm({ onAddBrewery }) {
 
     return (
         <div className="new-brewery-form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="new-form">
                 <input 
                     type="text"
                     name="name"
@@ -112,7 +112,7 @@ function BreweryForm({ onAddBrewery }) {
                     value={formData.details}
                     onChange={manageFormData}
                 />
-                <button type="submit" value="submit">Add New Brewery</button>
+                <button className="submit" type="submit" value="submit">Add New Brewery</button>
             </form>
         </div>
     )
