@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Search from "./Search"
 import BreweryList from "./BreweryList"
 
-function BreweryContainer({ getBreweries, setGetBreweries }) {
+function BreweryContainer({ getBreweries }) {
     const [ searchBrewery, setSearchBrewery ] = useState("")
 
     const displayBreweries = getBreweries.filter((brewery => {

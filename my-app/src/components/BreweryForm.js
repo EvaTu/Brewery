@@ -112,7 +112,7 @@ function BreweryForm({ onAddBrewery }) {
                     value={formData.details}
                     onChange={manageFormData}
                 />
-                <button className="submit" type="submit" value="submit">Add New Brewery</button>
+                <button className="submit" type="submit" value="submit" onClick={() => alert("Thank you for submitting a brewery! Check it out on our Home page!")}>Add New Brewery</button>
             </form>
         </div>
     )
